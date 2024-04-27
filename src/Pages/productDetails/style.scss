@@ -1,0 +1,184 @@
+@import "../../mixsins.scss";
+.product__details {
+  background: #eee;
+  &_hero {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    @include xl {
+      @include dFlex;
+    }
+    .product__left {
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        @include xl {
+          width: 100%;
+        }
+      }
+      .product__imgs {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        @include dFlex(center);
+        gap: 10px;
+
+        @include md {
+          @include dFlex;
+        }
+        @include lg {
+          @include dFlex;
+          flex-wrap: nowrap;
+        }
+
+        img {
+          width: 120px;
+          height: 130px;
+        }
+      }
+    }
+    .product__right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h3 {
+        color: rgb(43, 43, 45);
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.48px;
+      }
+      p {
+        color: rgb(122, 122, 122);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24.5px;
+        letter-spacing: 0.48px;
+        text-align: left;
+      }
+      .ratings {
+        display: flex;
+        gap: 12px;
+      }
+      .product__objects {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        p {
+          display: flex;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          letter-spacing: 0.48px;
+          text-align: left;
+          color: rgb(119, 119, 119);
+          span {
+            width: 100px;
+            font-weight: 600;
+            color: rgb(43, 43, 45);
+          }
+        }
+      }
+      .product__price {
+        display: flex;
+        gap: 5px;
+        margin-top: 30px;
+        h1 {
+          color: rgb(245, 62, 50);
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 28.01px;
+          letter-spacing: 0.48px;
+        }
+        h3 {
+          color: rgb(122, 122, 122);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0.48px;
+          text-align: left;
+          text-decoration-line: line-through;
+        }
+      }
+      .product__buttons {
+        display: flex;
+        gap: 15px;
+        button,
+        a {
+          padding: 10px 20px;
+          //   width: 40px;
+          height: 40px;
+          box-sizing: border-box;
+          border: 1px solid rgb(233, 233, 233);
+          border-radius: 5px;
+          cursor: pointer;
+          background: rgb(255, 255, 255);
+        }
+        .count {
+          //   display: flex;
+          @include dFlex;
+          flex-direction: column;
+          button {
+            width: 18px;
+            height: 18px;
+            padding: 0;
+          }
+        }
+        a {
+          background-color: rgb(245, 62, 50);
+          border: 1px solid rgb(245, 62, 50);
+          color: #fff;
+          &:hover {
+            background-color: rgba(245, 63, 50, 0.767);
+          }
+        }
+      }
+    }
+  }
+  .descriptipn__page {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    h1 {
+      color: rgb(43, 43, 45);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 25.5px;
+      border-bottom: 2px solid green;
+      padding: 25px 0;
+      max-width: 200px;
+      width: 100%;
+    }
+    p {
+      color: rgb(122, 122, 122);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24.5px;
+      letter-spacing: 0.48px;
+      text-align: left;
+      padding: 20px 0;
+    }
+    h2 {
+      padding: 20px 0;
+      color: rgb(43, 43, 45);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.48px;
+    }
+  }
+  .popularProducts {
+    padding: 3rem 0;
+  }
+  .products {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    @include dFlex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../mixsins.scss";
+.cart {
+  background: #eee;
+  .cart__page {
+    .cart__top {
+      @include dFlex;
+      // flex-wrap: wrap;
+      @include sm {
+        // flex-wrap: nowrap;
+      }
+    }
+    h3 {
+      padding: 15px;
+      text-align: center;
+      .cartProduct {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        @include sm {
+          padding: 25px;
+          flex-direction: row;
+        }
+        button {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &:nth-child(1) {
+        flex: 0.2;
+        @include md {
+          flex: 0.4;
+        }
+        text-align: start;
+
+        .productName {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          text-align: center;
+
+          padding: 25px 5px;
+
+          font-size: 14px;
+          @include sm {
+            padding: 25px 15px;
+          }
+          @include lg {
+            font-size: 18px;
+            flex-direction: row;
+          }
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+          }
+        }
+      }
+      &:nth-child(2) {
+        flex: 0.3;
+      }
+      &:nth-child(3) {
+        flex: 0.2;
+      }
+      &:nth-child(4) {
+        flex: 0.2;
+      }
+      &:nth-child(5) {
+        flex: 0.2;
+      }
+    }
+    .price {
+      display: none;
+      @include md {
+        display: block;
+      }
+    }
+    .product_price {
+      display: block;
+      @include md {
+        display: none;
+      }
+    }
+  }
+  .notFound {
+    width: 100%;
+    @include dFlex(center);
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .popular {
+    padding: 3rem 0;
+  }
+  .product__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    @include sm {
+      flex-direction: row;
+    }
+    @include lg {
+      left: 37%;
+    }
+    position: absolute;
+    top: 30px;
+    left: 20%;
+  }
+}

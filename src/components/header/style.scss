@@ -1,0 +1,156 @@
+@import "../../mixsins.scss";
+header {
+  position: relative;
+  .container {
+    @include dFlex;
+  }
+
+  .header__top {
+    padding: 20px 0;
+    background-color: rgb(224, 55, 12);
+    color: #fff;
+    display: none;
+    @include sm {
+      display: block;
+    }
+
+    ul {
+      @include dFlex;
+      gap: 41px;
+      .close {
+        display: none;
+        cursor: pointer;
+      }
+
+      a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0.48px;
+        border-bottom: 1px solid rgba(251, 255, 0, 0.021);
+        padding-bottom: 4px;
+        transition: 0.3s ease-in-out;
+        text-align: left;
+        &:hover,
+        &:focus {
+          color: rgb(251, 255, 0);
+          border-bottom: 1px solid rgb(251, 255, 0);
+        }
+      }
+    }
+    .phone__numbers {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &.mobile {
+      width: 100%;
+      display: block;
+      position: fixed;
+      transform: translateY(0);
+      top: 91px;
+      background-color: rgba(0, 0, 0, 0.568);
+      z-index: 999;
+      .container {
+        @include dFlex(center);
+      }
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .close {
+          position: absolute;
+          display: block;
+          right: 30px;
+          top: 5px;
+          font-size: 25px;
+        }
+      }
+      .phone__numbers {
+        display: none;
+      }
+    }
+  }
+
+  .header__bottom {
+    @include dFlex;
+    background-color: #fff;
+    z-index: 999;
+
+    .logo {
+      flex: 0.1;
+    }
+    .search__div {
+      flex: 0.7;
+      display: none;
+      @include sm {
+        @include dFlex;
+      }
+      border: 1px solid rgb(100, 180, 150);
+
+      border-radius: 5px;
+      overflow: hidden;
+
+      input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        padding: 12px 10px;
+      }
+      button {
+        padding: 15px;
+        background-color: red;
+        border: 0;
+      color: #fff;
+
+      }
+    }
+    &_buttons {
+      flex: 0.1;
+      @include dFlex;
+      gap: 12px;
+      .mobile {
+        display: block;
+        @include sm {
+          display: none;
+        }
+      }
+      button,
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: transparent;
+        padding: 12px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0.48px;
+        border: 0;
+        text-align: left;
+        position: relative;
+        p {
+          display: none;
+          @include sm {
+            display: block;
+          }
+        }
+        span {
+          position: absolute;
+          width: 15px;
+          font-size: 13px;
+          color: #fff;
+          font-weight: 700;
+          height: 15px;
+          @include dFlex(center);
+          border-radius: 50%;
+          top: 5px;
+          background-color: red;
+          left: 25px;
+        }
+      }
+    }
+  }
+}

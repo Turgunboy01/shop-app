@@ -1,0 +1,13 @@
+@import "../../mixsins.scss";
+.shop {
+  padding-bottom: 100px;
+  background-color: #eee;
+  .row {
+    flex-wrap: wrap;
+    @include dFlex(center);
+    gap: 30px;
+    @include lg {
+      @include dFlex;
+    }
+  }
+}

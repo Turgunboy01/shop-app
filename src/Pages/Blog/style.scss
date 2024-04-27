@@ -1,0 +1,131 @@
+@import "../../mixsins.scss";
+.blog {
+  overflow: hidden;
+  .blog_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .data {
+      h3 {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.48px;
+        text-align: left;
+        span {
+          color: rgb(245, 62, 50);
+        }
+        @include sm {
+          font-size: 16px;
+        }
+      }
+      h1 {
+        color: rgb(43, 43, 45);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        letter-spacing: 0.48px;
+        text-align: left;
+      }
+      p {
+        color: rgb(122, 122, 122);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24.5px;
+        letter-spacing: 0.48px;
+        text-align: left;
+        padding: 15px 0;
+      }
+      .message {
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 5px;
+        background: rgb(255, 255, 255);
+        padding: 35px 30px;
+        h3 {
+          @include dFlex;
+          align-items: flex-start;
+          color: rgb(245, 62, 50);
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 20px;
+          letter-spacing: 0.48px;
+          text-align: left;
+          button {
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+        p {
+          color: rgb(43, 43, 45);
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 28px;
+          letter-spacing: 0.48px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .hashtags {
+    @include dFlex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 16px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+    .local {
+      display: flex;
+      gap: 4px;
+      a {
+        @include dFlex(center);
+        width: 35px;
+        height: 35px;
+        border: 1px solid rgb(225, 223, 223);
+        border-radius: 5px;
+        cursor: pointer;
+        background: rgb(255, 255, 255);
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      button {
+        padding: 6px 16px;
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 5px;
+        background: rgb(255, 255, 255);
+        color: rgb(122, 122, 122);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.48px;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    }
+  }
+  .blog__box {
+    @include dFlex;
+    padding: 30px 0;
+    &_card {
+      flex: 0.45;
+      .cart__img {
+        width: 100%;
+      }
+    }
+    h3 {
+      color: rgb(43, 43, 45);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 28.8px;
+      letter-spacing: 0.48px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+    }
+  }
+}

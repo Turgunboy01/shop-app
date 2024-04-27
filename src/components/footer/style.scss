@@ -1,0 +1,144 @@
+@import "../../mixsins.scss";
+footer {
+  position: relative;
+  border-top: 1px solid rgb(233, 233, 233);
+  background: rgb(247, 247, 248);
+  .footer__top {
+    padding: 100px 0;
+    .assist1 {
+      position: absolute;
+      top: -24px;
+      right: 100px;
+    }
+    .assist2 {
+      position: absolute;
+      bottom: 200px;
+      left: -15px;
+    }
+    .assist3 {
+      position: absolute;
+      bottom: 30px;
+      right: 200px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: flex-start;
+      gap: 3rem;
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include xl {
+        @include dFlex;
+      }
+      .footer__box {
+        flex: 0.2;
+        p {
+          color: rgb(122, 122, 122);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24.5px;
+          letter-spacing: 0.48px;
+        }
+        a {
+          color: rgb(122, 122, 122);
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.48px;
+          &:hover {
+            color: rgb(245, 62, 50);
+          }
+        }
+        h3 {
+          color: rgb(0, 0, 0);
+          font-size: 18px;
+          font-weight: 700;
+          margin-top: 15px;
+          padding: 25px 0;
+          line-height: 23.4px;
+          letter-spacing: 0.48px;
+          text-align: left;
+        }
+        .footer__link,
+        .footer__category {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+        &.big {
+          flex: 0.4;
+          width: 100%;
+          &.contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            h3 {
+              padding: 0;
+              margin: 0;
+              margin-top: 40px;
+            }
+            .footer__input {
+              border: 1px solid rgb(233, 233, 233);
+              border-radius: 5px;
+              background: rgb(255, 255, 255);
+
+              @include dFlex;
+              input {
+                width: 100%;
+                border: 0;
+                outline: 0;
+                padding: 10px;
+              }
+              button {
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+                padding: 15px;
+              }
+            }
+          }
+          .footer__img {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            @include md {
+              display: flex;
+            }
+
+            gap: 12px;
+          }
+          .footer__local {
+            display: flex;
+            gap: 4px;
+            @include sm {
+            }
+            a {
+              @include dFlex(center);
+              width: 35px;
+              height: 35px;
+              border: 1px solid rgb(225, 223, 223);
+              border-radius: 5px;
+              cursor: pointer;
+              background: rgb(255, 255, 255);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    @include dFlex(center);
+    p {
+      padding: 20px 0;
+      border-top: 1px solid rgb(233, 233, 233);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      letter-spacing: 0.48px;
+      text-align: center;
+    }
+    span {
+      color: rgb(245, 62, 50);
+    }
+  }
+}

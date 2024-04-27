@@ -1,0 +1,100 @@
+@import "../../mixsins.scss";
+
+.product {
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  padding: 14px;
+  width: 300px;
+  margin: 10px 0;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  &:hover {
+    .product__img {
+      img {
+        transform: scale(1.09);
+      }
+    }
+  }
+  .product__img {
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    img {
+      width: 100%;
+      transition: 0.5s;
+      height: 278px;
+      object-fit: contain;
+    }
+    position: relative;
+    button {
+      cursor: pointer;
+    }
+    .cart {
+      position: absolute;
+      bottom: -20px;
+      left: 40%;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border: 1px solid rgb(233, 233, 233);
+      border-radius: 35px;
+      background: rgb(247, 247, 248);
+      transition: 0.5s;
+      color: #000;
+      @include dFlex(center);
+
+      &:hover {
+        border: 1px dashed crimson;
+        color: red;
+      }
+    }
+  }
+  .product_content {
+    @include dFlex(center);
+    text-align: center;
+    flex-direction: column;
+    gap: 12px;
+    .rating {
+      padding-top: 30px;
+      color: rgb(153, 153, 153);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 10px;
+      display: flex;
+      gap: 10px;
+      letter-spacing: 0.48px;
+    }
+    h3 {
+      color: rgb(43, 43, 45);
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.48px;
+      text-align: center;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h3 {
+        color: rgb(245, 62, 50);
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 28px;
+        letter-spacing: 0.48px;
+        text-align: center;
+      }
+      h4 {
+        margin-top: 5px;
+        color: rgb(122, 122, 122);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22.75px;
+        letter-spacing: 0.48px;
+        text-decoration-line: line-through;
+      }
+    }
+  }
+}

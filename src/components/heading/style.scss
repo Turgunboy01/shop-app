@@ -1,0 +1,30 @@
+@import "../../mixsins.scss";
+
+.heading {
+  background: rgb(245, 62, 50);
+  padding: 24px 0;
+  margin-bottom: 100px;
+  .row {
+    @include dFlex;
+  }
+  &__left {
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0.48px;
+    }
+  }
+  &__right {
+    color: #fff;
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18.2px;
+      letter-spacing: 0.48px;
+      text-transform: capitalize;
+    }
+  }
+}

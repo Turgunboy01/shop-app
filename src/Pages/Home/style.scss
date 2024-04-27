@@ -1,0 +1,521 @@
+@import "../../mixsins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+.home {
+  .homeBanner {
+    width: 100%;
+
+    .homeCarousel,
+    .homeCarousel2 {
+      width: 100%;
+      height: 500px;
+      @include md {
+        height: 800px;
+      }
+      background-color: rgba(211, 149, 57, 0.486);
+      @include dFlex(center);
+      .row {
+        @include dFlex;
+        gap: 30px;
+      }
+      h3 {
+        font-family: "Jost";
+        font-size: 25px;
+
+        span {
+          color: rgb(245, 62, 50);
+          font-weight: 800;
+        }
+      }
+      h1 {
+        font-family: "Jost";
+        font-size: 60px;
+        width: 80%;
+      }
+      p {
+        font-size: 17px;
+        margin: 20px 0;
+        color: #333;
+        width: 60%;
+        line-height: 25px;
+      }
+      a {
+        padding: 10px 24px;
+        letter-spacing: 1px;
+        font-weight: 800;
+        border-radius: 8px;
+        color: #fff;
+        background-color: rgb(245, 62, 50);
+        border: 1px solid rgb(245, 62, 50);
+        transition: 0.4s;
+        &:hover {
+          background-color: #fff;
+          color: rgb(197, 94, 87);
+        }
+      }
+    }
+    .homeCarousel2 {
+      background-color: crimson;
+      h3 {
+        span {
+          color: #fff;
+        }
+      }
+      p {
+        color: #fff;
+      }
+      button {
+        border: 1px solid #fff;
+      }
+    }
+    .slick-next {
+      right: 20px;
+      opacity: 1;
+      z-index: 999;
+    }
+    .slick-prev {
+      left: 20px;
+      z-index: 999;
+    }
+  }
+  .sale1 {
+    padding: 50px 0;
+    position: relative;
+    .assist {
+      position: absolute;
+      right: 20px;
+      top: 150px;
+    }
+    .row {
+      @include dFlex(center);
+      flex-wrap: wrap;
+      gap: 50px;
+      @include lg {
+        @include dFlex;
+        flex-wrap: nowrap;
+
+        gap: 30px;
+      }
+      .sale_cart {
+        width: 400px;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .cart__content {
+          position: absolute;
+          top: 50px;
+          left: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          border-radius: 5px;
+          h3 {
+            width: 170px;
+            color: rgb(43, 43, 45);
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.48px;
+            text-align: left;
+            text-transform: capitalize;
+          }
+          p {
+            color: rgb(119, 119, 119);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            letter-spacing: 0.48px;
+            span {
+              font-size: 16px;
+              font-weight: 700;
+              margin-right: 6px;
+              color: rgb(245, 62, 50);
+            }
+          }
+          a {
+            padding: 12px 22px;
+            width: 120px;
+            border-radius: 5px;
+            border: 0;
+            background: rgb(245, 62, 50);
+            color: #fff;
+            &:hover {
+              background: rgba(245, 63, 50, 0.555);
+            }
+          }
+        }
+      }
+    }
+  }
+  .testimonials {
+    padding: 50px 0;
+    position: relative;
+    .testiAsist {
+      position: absolute;
+      top: 100px;
+      left: 30px;
+    }
+    .row {
+      @include dFlex(center);
+      flex-wrap: wrap;
+      gap: 50px;
+      @include lg {
+        @include dFlex;
+        flex-wrap: nowrap;
+
+        gap: 30px;
+      }
+      .testimonial_cart {
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 5px;
+        background: rgb(247, 247, 248);
+        padding: 30px 50px;
+        text-align: center;
+        h3 {
+          color: rgb(43, 43, 45);
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 30.01px;
+          letter-spacing: 0.48px;
+          text-align: center;
+        }
+        p {
+          color: rgb(122, 122, 122);
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 22px;
+          letter-spacing: 0.48px;
+        }
+      }
+    }
+  }
+  .popular {
+    padding: 50px 0;
+    .title {
+      padding: 30px 0;
+    }
+    .row {
+      @include dFlex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  }
+  .greatPeople {
+    padding: 50px 0;
+    .title {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      h1 {
+        color: rgb(43, 43, 45);
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        letter-spacing: 0.48px;
+        text-align: center;
+      }
+      p {
+        color: rgb(122, 122, 122);
+        padding: 17px 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.48px;
+        text-align: center;
+      }
+    }
+    .row {
+      padding: 70px 0;
+      @include dFlex(center);
+      flex-wrap: wrap;
+      gap: 50px;
+      @include lg {
+        @include dFlex;
+        flex-wrap: nowrap;
+
+        gap: 30px;
+      }
+      .great__cart {
+        width: 400px;
+        box-sizing: border-box;
+        border: 1px solid rgb(233, 233, 233);
+        border-radius: 5px;
+        background: rgb(247, 247, 248);
+        padding: 50px;
+        padding-top: 70px;
+        position: relative;
+        @include dFlex(center);
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        .greatImg {
+          position: absolute;
+          top: -50px;
+          width: 100px;
+          height: 100px;
+        }
+        .top {
+          position: absolute;
+          top: 21px;
+          left: 31px;
+        }
+        .bottom {
+          position: absolute;
+          bottom: 21px;
+          right: 31px;
+        }
+        h4 {
+          color: rgb(122, 122, 122);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 33px;
+          letter-spacing: 0.48px;
+          text-align: center;
+        }
+        h3 {
+          color: rgb(43, 43, 45);
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 32.99px;
+          letter-spacing: 0.48px;
+          text-align: center;
+        }
+        p {
+          color: rgb(122, 122, 122);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24.5px;
+          letter-spacing: 0.48px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .new {
+    padding: 50px 0;
+    // padding-bottom: 100px;
+    .title {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      h1 {
+        color: rgb(43, 43, 45);
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        letter-spacing: 0.48px;
+        text-align: center;
+      }
+      p {
+        color: rgb(122, 122, 122);
+        padding: 17px 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.48px;
+        text-align: center;
+      }
+    }
+    .row {
+      @include dFlex(center);
+      flex-wrap: wrap;
+      gap: 30px;
+      @include lg {
+        @include dFlex;
+        flex-wrap: nowrap;
+      }
+      .new__cart {
+        width: 416px;
+
+        box-sizing: border-box;
+        border: 1px solid rgb(233, 233, 233);
+        background: rgb(255, 255, 255);
+        border-radius: 5px;
+        &_content {
+          padding: 30px 24px;
+          h3 {
+            color: rgb(119, 119, 119);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0.48px;
+            text-align: left;
+          }
+          p {
+            margin: 10px 0;
+            color: rgb(43, 43, 45);
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.48px;
+            text-align: left;
+          }
+          a {
+            color: rgb(100, 180, 150);
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 26.25px;
+            letter-spacing: 0.48px;
+            &:hover {
+              color: rgb(245, 62, 50);
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .dealDay {
+    .title {
+      padding: 30px 0;
+    }
+    .row {
+      flex-wrap: wrap;
+      @include dFlex(center);
+
+      @include xl {
+        @include dFlex;
+        flex-wrap: nowrap;
+      }
+      .day__cart {
+        width: 380px;
+        height: 450px;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .day__content {
+          width: 325px;
+          position: absolute;
+          left: 25px;
+          bottom: 25px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.05);
+          background: rgb(255, 255, 255);
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h3 {
+            color: rgb(37, 61, 78);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19.2px;
+            letter-spacing: 0%;
+          }
+          p {
+            color: rgb(182, 182, 182);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            span {
+              color: rgb(59, 183, 126);
+              margin-left: 5px;
+            }
+          }
+          .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+          .price {
+            @include dFlex;
+            h3 {
+              display: flex;
+              gap: 10px;
+              color: rgb(59, 183, 126);
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0%;
+              text-align: left;
+              span {
+                color: rgb(173, 173, 173);
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0%;
+                text-align: left;
+                text-decoration-line: line-through;
+              }
+            }
+            a {
+              border-radius: 4px;
+              padding: 10px 20px;
+              border: 1px solid rgb(245, 62, 50);
+              font-size: 14px;
+              font-weight: 700;
+              color: #fff;
+              text-transform: capitalize;
+              cursor: pointer;
+              background: rgb(245, 62, 50);
+              &:hover {
+                background-color: #fff;
+                color: rgb(245, 62, 50);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .services {
+    padding: 50px 0;
+    .row {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include lg {
+        @include dFlex;
+      }
+      gap: 5px;
+      .services__cart {
+        padding: 20px;
+        width: 321px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        border-radius: 10px;
+        background: rgb(244, 246, 250);
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        &_content {
+          h3 {
+            color: rgb(36, 36, 36);
+            // font-family: Quicksand;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 21.6px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+          p {
+            color: rgb(173, 173, 173);
+            // font-family: Lato;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
