@@ -11,11 +11,26 @@ const Shop = () => {
     <div className="shop">
       <Heading page={"Shop"} />
       <div className="container">
-        <div className="row">
-          {products.map((item) => (
-            <Product item={item} key={item.id} />
-          ))}
+        <div className="search__input">
+          <input
+            type="text"
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+            placeholder="Search products"
+          />
         </div>
+        <div className="row">
+          {products
+            .filter((item) => {
+              return search.toLowerCase() == ""
+                ? item
+                : item.name.toLowerCase().includes(search);
+            })
+            .map((item) => (
+              <Product item={item} key={item.id} />
+            ))}
+        </div>
+      </div>
       </div>
       <ScrollToTop smooth />
     </div>
